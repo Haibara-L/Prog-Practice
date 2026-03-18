@@ -77,8 +77,10 @@ return * this;
 例如，我们想重载复数类的加法，如果重载为成员函数，只能处理 c+1，相当于c.operator+(1)
 但是遇到1+c,就会出问题了，此时就要将+重载为普通函数
 #### 流运算符重载
+###### 流插入运算符
 cout 是在 iostream 中定义的, ostream 类的对象 "<<" 能用在 cout 上 因为在iostream里对 "<<" 进行了重载，实际上他重载了一些内置数据类型，但是对于自定义数据类型，需要我们自己重载
 流运算符的特点是可以进行链式调用，因此必须返回一个指向std::ostream对象的引用
+==注意<<只能重载为全局函数而不是重载为ostream的成员函数，因为iostream是标准库，不可以进行修改，无法添加处理自定义数据类型的方法，也不能重载为自定义数据类型的成员函数，因为如果这样就变成 "自定义数据类型>>cout"了，就不可以进行链式调用==
 >流对象不可以进行拷贝构造，因此每次返回的都是引用而不是一个临时对象，这样在链式调用中每次调用的都是同一个流对象，并且如果重载流对象必须传入流对象的引用
 
 ```
@@ -97,7 +99,6 @@ private:
 	int y;
 public:
 	Point() {};
-	//请在此输入代码
 	friend istream& operator>>(istream& i,Point& p)
 	{
 		i >> p.x >> p.y;
@@ -118,6 +119,15 @@ int main()
 	return 0;
 }
 ```
+###### 流提取运算符
+```
+istream & operator<<( istream & i, int n )
+{ Output(n); 
+return i;
+}
+```
+cin和cout是类似的，模仿使用即可
+atof库函数可以把const char\*指向的内容转换成float
 #### 类型转换运算符重载
 类型转换运算符重载允许**把一个类的对象自动转换成其他类型**（比如转成 `int`、`double`，甚至另一个类）
 语法格式：
@@ -155,3 +165,70 @@ int main() {
     cout << a << b << c;   // 都输出 42
 }
 ```
+#### 数组运算符重载
+当创建了一个自定义数据类型的数组，希望通过\[\]返回对象的某一个成员变量而不是成员本身，就需要重载\[\]运算符，返回自己需要返回的变量的引用，返回引用的目的是可以对他进行修改，从而实现赋值等功能
+例如：
+```
+class Array{ 
+public: 
+Array(int n = 10) : size(n)
+{ ptr = new int[n]; } 
+~Array() 
+{ delete [] ptr; } 
+int & operator[](int subscript)
+{ return ptr[subscript]; } 
+private: 
+int size;
+ int *ptr; 
+ }
+```
+如果我们还想实现变量之间的复制，可以重载赋值号
+
+```
+const Array & operator=( constArray & a)
+ { 
+ if( ptr == a.ptr ) return * this;
+  delete [] ptr; 
+  ptr = new int[ a.size ]; 
+  memcpy( ptr, a.ptr, sizeof(int ) * a.size); 
+  size = a.size; return * this; } 
+  //返回const array & 类型是为了高效实现 //a = b = c; 形式，即进行链式调用
+  }
+```
+补充：memcpy是内存拷贝函数,要 \#include\<memory\> 它将从a.ptr起的sizeof(int) * a.size 个字节拷贝到地址 ptr
+此外，为了实现复制构造函数的深拷贝，还要编写复制构造函数
+```
+Array(Array & a)
+ { ptr = new int[ a.size ]; 
+ memcpy( ptr, a.ptr, sizeof(int) * a.size); 
+ size = a.size;
+  } 完成形如Array b(a); 方式的初始化
+```
+==凡是涉及重载赋值运算符和复制构造函数，即将一个成员赋给另一个成员，都要考虑进行重载，写成深拷贝，否则无法完成数组元素空间的分配==
+#### 自增自减运算符重载
+有前置和后置的区分，后置先执行再自增，前置先自增再执行
+为了区分二者，C++规定
+- 前置运算符 作为一元 运算符重载
+```
+T &operator++() //成员函数 
+T &operator--() 
+T &operator++( T & ) //全局函数 
+T &operator--( T & ) 
+//++obj, obj.operator++() 或者operator++(obj) 都调用上述函数
+```
+- 后置运算符作为二元运算符重载，多写一个int参数，只要写一个int即可，不用写参数名
+```
+ T operator++(int) //成员函数 
+ T operator--(int) 
+ T operator++( T &, int ) //全局函数 
+ T operator--( T &, int ) 
+ //obj++, obj.operator++(0)或者operator++(obj, 0) 都调用上函数
+```
+#### 运算符重载的注意事项
+- C++不允许定义新的运算符
+- 重载后运算符的含义应当符合日常习惯，又实际意义
+- 运算符重载不改变运算符优先级
+- .   ::   ?:  sizeof运算符不可以被重载
+- 重载运算符(),\[\],->或者赋值运算符=时,运算符重载 函数必须声明为类的成员函数
+- 重载运算符是为了让它能作用于对象,因此重载运算符不允许操作数都不是对象，至少要有一个对象
+- 有一个操作数是枚举类型也可以，枚举类型（enum）是用户定义的类型 ，但它本质上是一个整数类型
