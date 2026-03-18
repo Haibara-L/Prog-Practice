@@ -3,7 +3,7 @@
 //using namespace std;
 //
 //class Array2 {
-//    // 在此处补充你的代码
+//    // 浜岀淮鏁扮粍绫荤殑瀹氫箟
 //public:
 //    int** arr;
 //    int rows;
