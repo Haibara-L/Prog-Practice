@@ -13,26 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Lesson 2.md",
+                "file": "Notes/Lesson 4.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lesson 2"
+              "title": "Lesson 4"
             }
           },
           {
-            "id": "8a2dd5ec99762346",
+            "id": "db4a26e1c29b60ed",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Notes/Lesson 5.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Lesson 5"
             }
           }
         ],
@@ -93,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "8137c47ea9fcbb2b",
@@ -109,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lesson 3.md",
+                "file": "Notes/Lesson 5.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +120,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Lesson 3 的反向链接列表"
+              "title": "Lesson 5 的反向链接列表"
             }
           },
           {
@@ -198,25 +199,27 @@
       "bases:新建数据库": false
     }
   },
-  "active": "8a2dd5ec99762346",
+  "active": "db4a26e1c29b60ed",
   "lastOpenFiles": [
+    "programDesign/14.FunAndDoAgain.exe",
+    "programDesign/14.FunAndDoAgain.cpp",
+    "programDesign/13.whatDelete.exe",
+    "programDesign/13.whatDelete.cpp",
+    "programDesign/12.FunAndDo.exe",
+    "programDesign/12.FunAndDo.cpp",
+    "programDesign/11.isThisPolymorphism.exe",
+    "programDesign/11.isThisPolymorphism.cpp",
+    "programDesign/12.Fun&Do.cpp",
     "Notes/Lesson 4.md",
-    "Notes/Lesson 2.md",
-    "README.md",
+    "Notes/Lesson 5.md",
+    "programDesign/11isThisPolymorphism.exe",
+    "programDesign/11isThisPolymorphism.cpp",
     "Notes/Lesson 3.md",
-    "PPT/2026_第01讲-类和对象1.pdf",
+    "Notes/Lesson 2.md",
+    "Notes/Lesson1.md",
+    "README.md",
     "Lesson 2.md",
     "Lesson1.md",
-    "Lesson 3.md",
-    "programDesign/programDesign/simpBigInt.cpp",
-    "programDesign/programDesign/biDimentionalClass.cpp",
-    "programDesign/programDesign/whatToReturn.cpp",
-    "programDesign/programDesign/classCopy.cpp",
-    "PPT/2025_第03讲-运算符重载.pdf",
-    "PPT/2026_第02讲-类和对象2.pdf",
-    "PPT/2025_第00讲-课程介绍.pdf",
-    "PPT/2026_第03讲-运算符重载 上.pdf",
-    "PPT",
-    "Notes/Lesson1.md"
+    "Lesson 3.md"
   ]
 }

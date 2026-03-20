@@ -224,6 +224,30 @@ T &operator--( T & )
  T operator--( T &, int ) 
  //obj++, obj.operator++(0)或者operator++(obj, 0) 都调用上函数
 ```
+具体方法
+```
+CDemo & CDemo::operator++() { //前置 ++
+ n ++; 
+ return * this; 
+ } // ++s即为: s.operator++(); 
+
+CDemo CDemo::operator++( int k ) { //后置 ++ 
+CDemo tmp(*this); //记录修改前的对象
+ n ++; 
+ return tmp; //返回修改前的对象
+ } // s++即为: s.operator++(0); 
+
+CDemo & operator--(CDemo & d) {//前置-- 
+d.n--; 
+return d; 
+} //--s即为: operator--(s); 
+
+CDemo operator--(CDemo & d,int) {//后置-- 
+CDemo tmp(d);
+ d.n --;
+ return tmp; 
+ } //s--即为: operator--(s, 0);
+```
 #### 运算符重载的注意事项
 - C++不允许定义新的运算符
 - 重载后运算符的含义应当符合日常习惯，又实际意义
