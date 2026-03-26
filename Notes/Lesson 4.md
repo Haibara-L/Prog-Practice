@@ -316,3 +316,16 @@ public:
     }
 };
 ```
+如果不使用虚继承，想要指定访问哪一个中间父类继承的根父类的变量
+```
+错误方法：
+d.Base1::Base::val//编译会报错
+正确的三种方法，即进行强制类型转化
+1.
+Base1& db=d;
+db.Base::val;
+2.
+((Base1&)d).Base::val;
+3.
+static_cast<Base1&>d.Base::val;
+```
