@@ -8,35 +8,53 @@
         "type": "tabs",
         "children": [
           {
-            "id": "93c7504675c94899",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Lesson 4.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Lesson 4"
-            }
-          },
-          {
             "id": "db4a26e1c29b60ed",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Lesson 6.md",
+                "file": "Notes/Lesson 7.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lesson 6"
+              "title": "Lesson 7"
+            }
+          },
+          {
+            "id": "600a6c592187f6bc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Lesson 7.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Lesson 7"
             }
           }
         ],
         "currentTab": 1
+      },
+      {
+        "id": "81df1bf1a353178a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1321e705d421712b",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "PPT/2026_第07讲-类模板和函数模板.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "2026_第07讲-类模板和函数模板"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -93,8 +111,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "8137c47ea9fcbb2b",
@@ -110,7 +127,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Lesson 5.md",
+                "file": "Notes/Lesson 7.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +137,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Lesson 5 的反向链接列表"
+              "title": "Lesson 7 的反向链接列表"
             }
           },
           {
@@ -199,23 +216,29 @@
       "bases:新建数据库": false
     }
   },
-  "active": "db4a26e1c29b60ed",
+  "active": "600a6c592187f6bc",
   "lastOpenFiles": [
-    "Notes/Lesson 5.md",
+    "programDesign/21.mysort.exe",
+    "programDesign/21.mysort.cpp",
+    "programDesign/20.easytemplate.exe",
+    "programDesign/20.easytemplate.cpp",
+    "programDesign/19.mistream_iterator.exe",
     "Notes/Lesson 6.md",
+    "programDesign/19.mistream_iterator.cpp",
+    "programDesign/19.istream_iterator.cpp",
+    "programDesign/19",
+    "programDesign/18.whycin.exe",
+    "题目总结.md",
+    "programDesign/18.whycin.cpp",
+    "programDesign/17.filter.exe",
+    "Notes/Lesson 7.md",
+    "iamgeRotate/result3.bmp",
+    "iamgeRotate/result2.bmp",
+    "iamgeRotate/result1.bmp",
+    "Notes/Lesson 5.md",
     "Notes/Lesson 4.md",
-    "PPT/2026_第05讲-多态与虚函数.pdf",
-    "PPT/2026_第6讲-输入输出与文件操作.pdf",
     "Notes/Lesson 1.md",
     "对抗搜索.md",
-    "programDesign/14.FunAndDoAgain.exe",
-    "programDesign/14.FunAndDoAgain.cpp",
-    "programDesign/13.whatDelete.exe",
-    "programDesign/13.whatDelete.cpp",
-    "programDesign/12.FunAndDo.exe",
-    "programDesign/12.FunAndDo.cpp",
-    "programDesign/11.isThisPolymorphism.exe",
-    "programDesign/11.isThisPolymorphism.cpp",
     "Notes/Lesson 3.md",
     "Notes/Lesson 2.md",
     "README.md",
