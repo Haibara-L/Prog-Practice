@@ -34,27 +34,23 @@
               "icon": "lucide-file",
               "title": "Lesson 7"
             }
-          }
-        ],
-        "currentTab": 1
-      },
-      {
-        "id": "81df1bf1a353178a",
-        "type": "tabs",
-        "children": [
+          },
           {
-            "id": "1321e705d421712b",
+            "id": "aed51d686ba8a5cd",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "PPT/2026_第07讲-类模板和函数模板.pdf"
+                "file": "Notes/Lesson 8.md",
+                "mode": "source",
+                "source": true
               },
-              "icon": "lucide-file-text",
-              "title": "2026_第07讲-类模板和函数模板"
+              "icon": "lucide-file",
+              "title": "Lesson 8"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -111,7 +107,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "8137c47ea9fcbb2b",
@@ -216,22 +213,23 @@
       "bases:新建数据库": false
     }
   },
-  "active": "600a6c592187f6bc",
+  "active": "aed51d686ba8a5cd",
   "lastOpenFiles": [
-    "programDesign/21.mysort.exe",
-    "programDesign/21.mysort.cpp",
-    "programDesign/20.easytemplate.exe",
-    "programDesign/20.easytemplate.cpp",
-    "programDesign/19.mistream_iterator.exe",
-    "Notes/Lesson 6.md",
-    "programDesign/19.mistream_iterator.cpp",
-    "programDesign/19.istream_iterator.cpp",
-    "programDesign/19",
-    "programDesign/18.whycin.exe",
-    "题目总结.md",
-    "programDesign/18.whycin.cpp",
-    "programDesign/17.filter.exe",
+    "programDesign/24.carray3d.exe",
+    "programDesign/26.m_ostream_iterator.exe",
+    "programDesign/26.m_ostream_iterator.cpp",
+    "programDesign/25.mfilter.exe",
+    "programDesign/25.mfilter.cpp",
+    "programDesign/24.carray3d.cpp",
+    "programDesign/23.sortbydis.exe",
+    "programDesign/23.sortbydis.cpp",
+    "programDesign/22.goodcopy.exe",
+    "programDesign/22.goodcopy.cpp",
+    "PPT/2026_第08讲-标准模板库1.pdf",
     "Notes/Lesson 7.md",
+    "Notes/Lesson 8.md",
+    "Notes/Lesson 6.md",
+    "Notes/题目总结.md",
     "iamgeRotate/result3.bmp",
     "iamgeRotate/result2.bmp",
     "iamgeRotate/result1.bmp",
