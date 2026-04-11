@@ -43,7 +43,7 @@
               "state": {
                 "file": "Notes/Lesson 8.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
               "title": "Lesson 8"
@@ -215,6 +215,8 @@
   },
   "active": "aed51d686ba8a5cd",
   "lastOpenFiles": [
+    "PPT/2025_第14讲-标准模板库2.pdf",
+    "PPT/2025_第14讲-标准模板库2.pdf.crdownload",
     "programDesign/24.carray3d.exe",
     "programDesign/26.m_ostream_iterator.exe",
     "programDesign/26.m_ostream_iterator.cpp",
@@ -224,8 +226,6 @@
     "programDesign/23.sortbydis.exe",
     "programDesign/23.sortbydis.cpp",
     "programDesign/22.goodcopy.exe",
-    "programDesign/22.goodcopy.cpp",
-    "PPT/2026_第08讲-标准模板库1.pdf",
     "Notes/Lesson 7.md",
     "Notes/Lesson 8.md",
     "Notes/Lesson 6.md",
